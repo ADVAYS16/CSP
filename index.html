@@ -80,6 +80,100 @@ window.onload = wrap_img;
 <p>You can edit the <code class="language-plaintext highlighter-rouge">index.html</code> file to change this content.</p>
 
 <h1 id="posts">Posts</h1>
+<p>$high-emph: rgba(white, 0.87);
+$med-emph: rgba(white, 0.69); //Noicee
+$low-emph: rgba(white, 0.38);
+$dark-grey : #121212; 
+// $dark-grey : #1F1B24;
+$overlay: mix($dark-grey, white, 95%);
+$overlay-light: mix($dark-grey, white, 86%);</p>
+
+<p>html, body, input, textarea, select, button { <br />
+  color: $high-emph !important;
+  background-color: $dark-grey !important;
+}</p>
+
+<p>a {
+    color: rgb(75, 186, 255) !important;
+}</p>
+
+<p>a:hover {
+    color:$high-emph !important;
+}</p>
+
+<p>.site-title, .site-title:visited, .site-nav, .page-link {
+    color: $high-emph !important;
+}</p>
+
+<p>.site-nav {
+    background-color: $dark-grey;
+    border-color: $overlay-light;
+}</p>
+
+<ul>
+  <li>{
+  scrollbar-color: $dark-grey $overlay-light;
+}</li>
+</ul>
+
+<p>pre, code {
+    // BVas a lighter colour to better highlight short code words
+    border-color: $overlay-light;
+    background-color: $overlay;
+}</p>
+
+<p>.page-description {
+    color: $med-emph;
+}</p>
+
+<p>.post-meta {
+    color: $low-emph;
+}</p>
+
+<p>.post-content p, .post-content li {
+    color: $med-emph;
+}</p>
+
+<p>.btn {
+    background-color: $overlay !important;
+    color: $high-emph !important;
+    border-color: $overlay-light !important;
+}</p>
+
+<p>.btn:hover {
+    background-color: $dark-grey !important;
+}</p>
+
+<p>table th{
+    background-color: $overlay;
+    border-color: $overlay-light;
+    color: $high-emph;
+}</p>
+
+<p>table td{
+    background-color: $dark-grey;
+    border-color: $overlay-light;
+    color: $med-emph;
+}</p>
+
+<p>.flash {
+    color: $dark-grey !important;
+    filter: brightness(80%);
+}</p>
+
+<p>canvas {
+    filter: invert(100%);
+}</p>
+
+<p>.post-list &gt; li &gt; div {
+    box-shadow: none !important;
+    background-color: $overlay;
+    border: none !important;
+}</p>
+
+<p>li .post-meta-description {
+    color: $med-emph !important;
+}</p>
 
 
 
