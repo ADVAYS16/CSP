@@ -1,15 +1,3 @@
-/*-----------------------------------*/
-/*--- IMPORT STYLES FOR FASTPAGES ---*/
-@import "minima/fastpages-styles";   
-
-
-
-/*-----------------------------------*/
-/*----- ADD YOUR STYLES BELOW -------*/
-
-// If you want to turn off dark background for syntax highlighting, comment or delete the below line.
-@import "minima/fastpages-dracula-highlight"; 
-
 $high-emph: rgba(white, 0.87);
 $med-emph: rgba(white, 0.69); //Noicee
 $low-emph: rgba(white, 0.38);
@@ -101,3 +89,4 @@ canvas {
 
 li .post-meta-description {
     color: $med-emph !important;
+}
