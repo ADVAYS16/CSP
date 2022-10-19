@@ -125,90 +125,59 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">---</span>
-<span class="n">layout</span><span class="p">:</span> <span class="n">post</span>
-<span class="n">toc</span><span class="p">:</span> <span class="n">true</span>
-<span class="n">description</span><span class="p">:</span> <span class="s2">&quot;Making a table from Javascript data&quot;</span>
-<span class="n">categories</span><span class="p">:</span> <span class="p">[</span><span class="n">javascript</span><span class="p">,</span> <span class="n">html</span><span class="p">]</span>
-<span class="n">title</span><span class="p">:</span> <span class="n">Cricket</span> <span class="n">stats</span> <span class="n">table</span>
-
-<span class="o">---</span>
-<span class="n">I</span> <span class="n">will</span> <span class="n">demonstrate</span> <span class="n">usage</span> <span class="n">of</span> <span class="n">both</span> <span class="n">HTML</span> <span class="n">fragments</span> <span class="ow">and</span> <span class="n">Javascript</span> <span class="n">to</span> <span class="n">make</span> <span class="n">a</span> <span class="n">table</span> <span class="n">of</span> <span class="n">the</span> <span class="n">top</span> <span class="mi">5</span> <span class="n">goal</span> <span class="n">scorers</span> <span class="ow">in</span> <span class="n">Champion</span><span class="s1">&#39;s League History.</span>
-
-<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
-    <span class="n">var</span> <span class="n">statistics</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="n">goals</span><span class="p">:</span> <span class="mi">140</span><span class="p">,</span> <span class="n">appearances</span><span class="p">:</span> <span class="mi">183</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">37</span><span class="p">},</span>
-        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="n">goals</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span> <span class="n">appearances</span><span class="p">:</span> <span class="mi">159</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">35</span><span class="p">},</span>
-        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Robert Lewandowski&quot;</span><span class="p">,</span> <span class="n">goals</span><span class="p">:</span> <span class="mi">91</span><span class="p">,</span> <span class="n">appearances</span><span class="p">:</span> <span class="mi">110</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">34</span><span class="p">},</span>
-        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Karim Benzema&quot;</span><span class="p">,</span> <span class="n">goals</span><span class="p">:</span> <span class="mi">86</span><span class="p">,</span> <span class="n">appearances</span><span class="p">:</span> <span class="mi">145</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">34</span><span class="p">},</span>
-        <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Raul&quot;</span><span class="p">,</span> <span class="n">goals</span><span class="p">:</span> <span class="mi">71</span><span class="p">,</span> <span class="n">appearances</span><span class="p">:</span> <span class="mi">142</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">45</span><span class="p">}</span>
-<span class="p">]</span>
-<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">table</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;table table-hover table-dark table-striped&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Rank</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Name</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">goals</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">appearances</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">age</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
-    <span class="n">var</span> <span class="n">output</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">index</span> <span class="ow">in</span> <span class="n">statistics</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;tr&gt;&lt;td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="n">statistics</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="n">statistics</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="n">statistics</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">goalss</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="n">statistics</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">appearances</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="n">statistics</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">age</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
-        <span class="n">output</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/tr&gt;&#39;</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="n">document</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">output</span><span class="p">);</span>
-<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+<p>layout: post
+toc: true
+description: "Making a table from Javascript data"
+categories: [javascript, html]
+title: Champion's League Table</p>
+<hr />
+<p>I will demonstrate usage of both HTML fragments and Javascript to make a table of the top 5 goal scorers in Champion's League History.</p>
+<p><script>
+    var statistics = [
+        {id: 1, name: "Cristiano Ronaldo", Goals: 140, Appearances: 183, Age: 37},
+        {id: 2, name: "Lionel Messi", Goals: 127, Appearances: 159, Age: 35},
+        {id: 3, name: "Robert Lewandowski", Goals: 91, Appearances: 110, Age: 34},
+        {id: 4, name: "Karim Benzema", Goals: 86, Appearances: 145, Age: 34},
+        {id: 5, name: "Raul", Goals: 71, Appearances: 142, Age: 45}
+]
+</script></p>
+<table class="table table-hover table-dark table-striped">
+<tr>
+    <th>Rank</th>
+    <th>Name</th>
+    <th>Goals</th>
+    <th>Appearances</th>
+    <th>Age</th>
+</tr>
+<script>
+    var output = "";
+    for (index in statistics) {
+        output += '<tr><td>';
+        output += statistics[index].id;
+        output += '</td>';
+        output += '<td>';
+        output += statistics[index].name;
+        output += '</td>';
+        output += '<td>';
+        output += statistics[index].Goals;
+        output += '</td>';
+        output += '<td>';
+        output += statistics[index].Appearances;
+        output += '</td>';
+        output += '<td>';
+        output += statistics[index].Age;
+        output += '</td>';
+        output += '</tr>';
+    }
+    document.write(output);
+</script>
+</table>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In [1], line 9</span>
-<span class="ansi-red-fg">    I will demonstrate usage of both HTML fragments and Javascript to make a table of the top 5 goal scorers in Champion&#39;s League History.</span>
-                                                                                                                        ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> unterminated string literal (detected at line 9)
-</pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
