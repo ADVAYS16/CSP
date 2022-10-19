@@ -13,21 +13,21 @@
   
     
         ,"post1": {
-            "title": "HTML and Javascript Fragments",
-            "content": "| | Definition | ||--| | Github | GitHub is a code hosting platform for version control and collaboration| | Python | High-level object-oriented scripting language | | Fastpages | A cloud based blogging platform with Jupiter Notebook implementation | | Repository | A Place in which Code is stored and saved | | Print | A way to display messages through Python | | Lists | A sequence of elements | | Dictionary | Used to store information in Python | .",
-            "url": "https://advays16.github.io/CSP-/posts/2022/10/17/HTML-Table.html",
-            "relUrl": "/posts/2022/10/17/HTML-Table.html",
-            "date": " • Oct 17, 2022"
+            "title": "Csp Alumni Panel",
+            "content": "How did you realize you wanted to do your major and taking AP CSP/CSA . Logical thinking / technical background led to their overall decisions . Reflection on past . | . | . | . What is the biggest challenge you’ve encountered with CompSci? . Motivation: You will face problems! It doesn’t matter what the problem is but rather how you face the problem. . | Ego’s: People will always be better than you and it should not impact your decisions in life and how you face adversity. Rather than worrying about others focus on creating your own path. . | Starting: Its the easiest and the hardest thing in CompSci. . | . | Are there any PBL (project based learning) scenarios in College Computer Science classes? . There are very few project “classes” in college. Often times you may have projects in specific courses but they are minimal to say the least. . | Shared knowledge or being able to work in teams is one of the most important things you can learn. . | Working in teams and groups is present in essentially all classes and its an extremely important lifeskill . | . | How have you applied CS in your major if you are not majoring in CS? . Some of the skills you learn during coding can be applied to various different forms of engineering . For example: . Code can be used to utilize actions: Mechanical/Aerospace . | Statistics: Program using MatLabs and other sources . | . | . | Programing is key! . | . | For existing college students have you had a job with school or professor? . Tutoring Positions . Work with professors . | . | Code Ninja . Teaching Younger kids . | . | Northrop Grumman . Robotics Projects . | . | UCSD Professor . Machine Learning . | . | . | Personal Projects? . Do something fun! . Be a kid and work on what you like . | . | . | .",
+            "url": "https://advays16.github.io/CSP-/2022/10/18/CSP-Alumni-Panel.html",
+            "relUrl": "/2022/10/18/CSP-Alumni-Panel.html",
+            "date": " • Oct 18, 2022"
         }
         
     
   
     
         ,"post2": {
-            "title": "Csp Alumni Panel",
-            "content": "How did you realize you wanted to do your major and taking AP CSP/CSA . Logical thinking / technical background led to their overall decisions . Reflection on past . | . | . | . What is the biggest challenge you’ve encountered with CompSci? . Motivation: You will face problems! It doesn’t matter what the problem is but rather how you face the problem. . | Ego’s: People will always be better than you and it should not impact your decisions in life and how you face adversity. Rather than worrying about others focus on creating your own path. . | Starting: Its the easiest and the hardest thing in CompSci. . | . | Are there any PBL (project based learning) scenarios in College Computer Science classes? . There are very few project “classes” in college. Often times you may have projects in specific courses but they are minimal to say the least. . | Shared knowledge or being able to work in teams is one of the most important things you can learn. . | Working in teams and groups is present in essentially all classes and its an extremely important lifeskill . | . | How have you applied CS in your major if you are not majoring in CS? . Some of the skills you learn during coding can be applied to various different forms of engineering . For example: . Code can be used to utilize actions: Mechanical/Aerospace . | Statistics: Program using MatLabs and other sources . | . | . | Programing is key! . | . | For existing college students have you had a job with school or professor? . Tutoring Positions . Work with professors . | . | Code Ninja . Teaching Younger kids . | . | Northrop Grumman . Robotics Projects . | . | UCSD Professor . Machine Learning . | . | . | Personal Projects? . Do something fun! . Be a kid and work on what you like . | . | . | .",
-            "url": "https://advays16.github.io/CSP-/2022/10/17/CSP-Alumni-Panel.html",
-            "relUrl": "/2022/10/17/CSP-Alumni-Panel.html",
+            "title": "Title",
+            "content": "layout: post toc: true description: &quot;Making a table from Javascript data&quot; categories: [javascript, html] title: Cricket stats table I will demonstrate usage of both HTML fragments and Javascript to make a table of the top 5 goal scorers in Champion&#39;s League History. &lt;script&gt; var statistics = [ {id: 1, name: &quot;Cristiano Ronaldo&quot;, goals: 140, appearances: 183, age: 37}, {id: 2, name: &quot;Lionel Messi&quot;, goals: 127, appearances: 159, age: 35}, {id: 3, name: &quot;Robert Lewandowski&quot;, goals: 91, appearances: 110, age: 34}, {id: 4, name: &quot;Karim Benzema&quot;, goals: 86, appearances: 145, age: 34}, {id: 5, name: &quot;Raul&quot;, goals: 71, appearances: 142, age: 45} ] &lt;/script&gt; &lt;table class=&quot;table table-hover table-dark table-striped&quot;&gt; &lt;tr&gt; &lt;th&gt;Rank&lt;/th&gt; &lt;th&gt;Name&lt;/th&gt; &lt;th&gt;goals&lt;/th&gt; &lt;th&gt;appearances&lt;/th&gt; &lt;th&gt;age&lt;/th&gt; &lt;/tr&gt; &lt;script&gt; var output = &quot;&quot;; for (index in statistics) { output += &#39;&lt;tr&gt;&lt;td&gt;&#39;; output += statistics[index].id; output += &#39;&lt;/td&gt;&#39;; output += &#39;&lt;td&gt;&#39;; output += statistics[index].name; output += &#39;&lt;/td&gt;&#39;; output += &#39;&lt;td&gt;&#39;; output += statistics[index].goalss; output += &#39;&lt;/td&gt;&#39;; output += &#39;&lt;td&gt;&#39;; output += statistics[index].appearances; output += &#39;&lt;/td&gt;&#39;; output += &#39;&lt;td&gt;&#39;; output += statistics[index].age; output += &#39;&lt;/td&gt;&#39;; output += &#39;&lt;/tr&gt;&#39;; } document.write(output); &lt;/script&gt; &lt;/table&gt; . Cell In [1], line 9 I will demonstrate usage of both HTML fragments and Javascript to make a table of the top 5 goal scorers in Champion&#39;s League History. ^ SyntaxError: unterminated string literal (detected at line 9) .",
+            "url": "https://advays16.github.io/CSP-/2022/10/17/HTML-Table.html",
+            "relUrl": "/2022/10/17/HTML-Table.html",
             "date": " • Oct 17, 2022"
         }
         
@@ -148,7 +148,9 @@
   
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "Vocab Page",
           "content": "Term Definition . Github | GitHub is a code hosting platform for version control and collaboration | . Python | High-level object-oriented scripting language | . Fastpages | A cloud based blogging platform with Jupiter Notebook implementation | . Repository | A Place in which Code is stored and saved | . Print | A way to display messages through Python | . Lists | A sequence of elements | . Dictionary | Used to store information in Python | .",
           "url": "https://advays16.github.io/CSP-/Vocab/",
@@ -159,7 +161,7 @@
   
 
   
-      ,"page2": {
+      ,"page3": {
           "title": "About Me",
           "content": "Hey, I’m Advay! . I’m a Sophomore at Del Norte High School who is interested in Computer Science! I love to watch and play sports in my free time. I am a Black Belt in Tang Soo Do a form of Martial Arts. I am a part of the Water Polo and Swim Team at Del Norte. I am a car enthusiast and my favorite soccer team is Bayern Munich. . .",
           "url": "https://advays16.github.io/CSP-/about/",
@@ -191,7 +193,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://advays16.github.io/CSP-/robots.txt",
