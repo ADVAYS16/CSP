@@ -13,15 +13,15 @@ tags: [html, liquid, javascript]
 <!-- Hack 3: do your own thing -->
 
 
-{% assign BITS = 8 %}
+{% assign BITS = 24 %}
 
 <div class="container bg-primary">
-    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+    <header class="pb-3 mb-4 border-bottom border-primary text-green">
         <span class="fs-4">Binary Math with Conversions</span>
     </header>
     <div class="row justify-content-md-center">
         <div class="col-8">
-            <table class="table">
+            <table class="table" style= "color:red">
             <tr id="table">
                 <th>Plus</th>
                 <th>Binary</th>
@@ -47,7 +47,7 @@ tags: [html, liquid, javascript]
             <tr>
                 {% comment %}Build many bits{% endcomment %}
                 {% for i in (0..bits) %}
-                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
+                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto">
                     <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
                 </td>
                 {% endfor %}
@@ -67,10 +67,9 @@ tags: [html, liquid, javascript]
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
-    const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.gif";
+    const IMAGE_ON = "https://media1.giphy.com/media/Lqo3UBlXeHwZDoebKX/giphy.gif";
     const MSG_OFF = "Turn off";
-    const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
-
+    const IMAGE_OFF = "https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg"
     // return string with current value of each bit
     function getBits() {
         let bits = "";
