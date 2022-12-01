@@ -17,20 +17,29 @@ tags: [html, liquid, javascript]
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-green">
-        <span class="fs-4">Binary Math with Conversions</span>
+        <span class="fs-4">Binary Math with Conversions Hi</span>
     </header>
     <div class="row justify-content-md-center">
         <div class="col-8">
-            <table class="table" style= "color:red">
+            <table class="table" style= "color:black">
             <tr id="table">
                 <th>Plus</th>
                 <th>Binary</th>
                 <th>Octal</th>
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
-                <th>Minus</th>
+                <th>Bits</th>
             </tr>
             <tr>
+            <style type="text/css">
+         #colorBox {
+             margin-top: 0.5rem;
+             width: 100px;
+             height: 100px;
+             outline: 3px solid black;
+         }
+             </style>
+         <div id="colorBox"></div>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                 <td id="binary">00000000</td>
                 <td id="octal">0</td>
@@ -87,6 +96,12 @@ tags: [html, liquid, javascript]
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+    
+    let text2 = document.getElementById('hexadecimal').innerHTML;
+         let text1 = "#";
+         let result = text1.concat(text2);
+       //  document.body.style.backgroundColor = result;
+         document.getElementById('colorBox').style.backgroundColor = result;
     }
     //
     function decimal_2_base(decimal, base) {
@@ -153,4 +168,6 @@ tags: [html, liquid, javascript]
         }
         }
     }
+
+
 </script>
