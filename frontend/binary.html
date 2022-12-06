@@ -4,23 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Binary Math | Advay’s Fastpages</title>
+<title>Unit 3 Section 5-9 | Advay’s Fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Binary Math" />
+<meta property="og:title" content="Unit 3 Section 5-9" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A Binary Math illustrative application using HTML, Liquid, and JavaScript." />
-<meta property="og:description" content="A Binary Math illustrative application using HTML, Liquid, and JavaScript." />
+<meta name="description" content="Homework" />
+<meta property="og:description" content="Homework" />
 <link rel="canonical" href="https://advays16.github.io/CSP-/frontend/binary" />
 <meta property="og:url" content="https://advays16.github.io/CSP-/frontend/binary" />
 <meta property="og:site_name" content="Advay’s Fastpages" />
-<meta property="og:image" content="https://advays16.github.io/CSP-/images/binary.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-17T00:00:00-06:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://advays16.github.io/CSP-/images/binary.png" />
-<meta property="twitter:title" content="Binary Math" />
+<meta property="article:published_time" content="2022-12-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit 3 Section 5-9" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-17T00:00:00-06:00","datePublished":"2022-11-17T00:00:00-06:00","description":"A Binary Math illustrative application using HTML, Liquid, and JavaScript.","headline":"Binary Math","image":"https://advays16.github.io/CSP-/images/binary.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://advays16.github.io/CSP-/frontend/binary"},"url":"https://advays16.github.io/CSP-/frontend/binary"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-05T00:00:00-06:00","datePublished":"2022-12-05T00:00:00-06:00","description":"Homework","headline":"Unit 3 Section 5-9","mainEntityOfPage":{"@type":"WebPage","@id":"https://advays16.github.io/CSP-/frontend/binary"},"url":"https://advays16.github.io/CSP-/frontend/binary"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSP-/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://advays16.github.io/CSP-/feed.xml" title="Advay's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSP-/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,305 +70,376 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
-<!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
-<!-- Hack 3: do your own thing -->
+        <h1 id="35-37-notes">3.5-3.7 Notes</h1>
 
-<div class="container bg-primary">
-    <header class="pb-3 mb-4 border-bottom border-primary text-green">
-        <span class="fs-4">Binary Math with Conversions Hi</span>
-    </header>
-    <div class="row justify-content-md-center">
-        <div class="col-8">
-            <table class="table" style="color:black">
-            <tr id="table">
-                <th>Plus</th>
-                <th>Binary</th>
-                <th>Octal</th>
-                <th>Hexadecimal</th>
-                <th>Decimal</th>
-                <th>Bits</th>
+<h2 id="35">3.5</h2>
+<blockquote>
+  <p>Write expressions with logical operators and evaluate expressions that use logical operators</p>
+</blockquote>
+
+<h3 id="vocabbig-ideas">Vocab/Big Ideas</h3>
+<p><em>Boolean</em>- binary variable with only two possible values, “true” or “false”
+There are multiple operators used to evaluate 2 variables. 
+In pseudocode the relational operators are =, &gt;, &lt;, ≠, ≥, and ≤. 
+Python uses != instead of ≠. These operators help determine the boolean value of a statement.</p>
+
+<h3 id="logical-operators">Logical Operators</h3>
+<p>Logical operators allow for boolean values to be evaluated. 
+Pseudocode uses the logical operators NOT, AND, and OR. Javascript uses the same logic, but uses different ways to represent the operators: &amp;&amp;(and), | |(or), |(not).</p>
+
+<html>
+<style>
+    table, th, td { 
+        border:2px solid white;
+    }
+</style>
+    <div>Relational Operators Table</div>
+    <br /> 
+    <div>Value 1 and Value 2(And operator)</div>
+    <div>
+        <table>
+            <tr>
+                <th>Value 1</th>
+                <th>Value 2</th>
+                <th>Result</th>
             </tr>
             <tr>
-            <style type="text/css">
-         #colorBox {
-             margin-top: 0.5rem;
-             width: 100px;
-             height: 100px;
-             outline: 3px solid black;
-         }
-             </style>
-         <div id="colorBox"></div>
-                <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                <td id="binary">00000000</td>
-                <td id="octal">0</td>
-                <td id="hexadecimal">0</td>
-                <td id="decimal">0</td>
-                <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-            </tr>
-            </table>
-        </div>
-        <div class="col-12">
-            
-             
-            <table class="table">
-            <tr>
-                
-                
-                <td><img class="img-responsive py-3" id="bulb0" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt0" onclick="javascript:toggleBit(0)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb1" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt1" onclick="javascript:toggleBit(1)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb2" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt2" onclick="javascript:toggleBit(2)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb3" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt3" onclick="javascript:toggleBit(3)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb4" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt4" onclick="javascript:toggleBit(4)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb5" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt5" onclick="javascript:toggleBit(5)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb6" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt6" onclick="javascript:toggleBit(6)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb7" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt7" onclick="javascript:toggleBit(7)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb8" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt8" onclick="javascript:toggleBit(8)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb9" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt9" onclick="javascript:toggleBit(9)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb10" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt10" onclick="javascript:toggleBit(10)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb11" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt11" onclick="javascript:toggleBit(11)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb12" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt12" onclick="javascript:toggleBit(12)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb13" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt13" onclick="javascript:toggleBit(13)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb14" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt14" onclick="javascript:toggleBit(14)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb15" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt15" onclick="javascript:toggleBit(15)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb16" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt16" onclick="javascript:toggleBit(16)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb17" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt17" onclick="javascript:toggleBit(17)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb18" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt18" onclick="javascript:toggleBit(18)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb19" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt19" onclick="javascript:toggleBit(19)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb20" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt20" onclick="javascript:toggleBit(20)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb21" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt21" onclick="javascript:toggleBit(21)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb22" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt22" onclick="javascript:toggleBit(22)">Turn on</button>
-                </td>
-                
-                <td><img class="img-responsive py-3" id="bulb23" src="https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg" alt="" width="40" height="Auto" />
-                    <button type="button" id="butt23" onclick="javascript:toggleBit(23)">Turn on</button>
-                </td>
-                
+                <td>True</td>
+                <td>True</td>
+                <td>True</td>
             </tr>
             <tr>
-                
-                
-                <td><input type="text" id="digit0" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit1" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit2" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit3" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit4" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit5" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit6" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit7" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit8" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit9" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit10" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit11" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit12" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit13" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit14" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit15" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit16" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit17" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit18" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit19" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit20" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit21" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit22" value="0" size="1" readonly="" /></td>
-                
-                <td><input type="text" id="digit23" value="0" size="1" readonly="" /></td>
-                
+                <td>True</td>
+                <td>False</td>
+                <td>False</td>
             </tr>
-            </table>
-        </div>
+            <tr>
+                <td>False</td>
+                <td>True</td>
+                <td>False</td>
+            </tr>
+            <tr>
+                <td>False</td>
+                <td>False</td>
+                <td>False</td>
+            </tr>
+        </table>
     </div>
-</div>
+    <div>Value 1 or Value 2(Or operator)</div>
+    <div>
+        <table>
+            <tr>
+                <th>Value 1</th>
+                <th>Value 2</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>True</td>
+                <td>True</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>True</td>
+                <td>False</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>False</td>
+                <td>True</td>
+                <td>True</td>
+            </tr>
+            <tr>
+                <td>False</td>
+                <td>False</td>
+                <td>False</td>
+            </tr>
+        </table>
+    </div>
+    <div>Not operator</div>
+    <div>
+        <table>
+            <tr>
+                <th>Not</th>
+                <th>Value</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Not</td>
+                <td>True</td>
+                <td>False</td>
+            </tr>
+            <tr>
+                <td>Not</td>
+                <td>False</td>
+                <td>True</td>
+            </tr>
+        </table>
+    </div>
 
-<script>
-    const BITS = 24;
-    const MAX = 2 ** BITS - 1;
-    const MSG_ON = "Turn on";
-    const IMAGE_ON = "https://media1.giphy.com/media/Lqo3UBlXeHwZDoebKX/giphy.gif";
-    const MSG_OFF = "Turn off";
-    const IMAGE_OFF = "https://w0.peakpx.com/wallpaper/250/115/HD-wallpaper-lightbulb-monochrome-minimalism-simple-background.jpg"
-    // return string with current value of each bit
-    function getBits() {
-        let bits = "";
-        for(let i = 0; i < BITS; i++) {
-        bits = bits + document.getElementById('digit' + i).value;
-        }
-        return bits;
-    }
-    // setter for DOM values
-    function setConversions(binary) {
-        document.getElementById('binary').innerHTML = binary;
-        // Octal conversion
-        document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
-        // Hexadecimal conversion
-        document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
-        // Decimal conversion
-        document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
-    
-    let text2 = document.getElementById('hexadecimal').innerHTML;
-         let text1 = "#";
-         let result = text1.concat(text2);
-       //  document.body.style.backgroundColor = result;
-         document.getElementById('colorBox').style.backgroundColor = result;
-    }
-    //
-    function decimal_2_base(decimal, base) {
-        let conversion = "";
-        // loop to convert to base
-        do {
-        let digit = decimal % base;
-        conversion = "" + digit + conversion; // what does this do?
-        decimal = ~~(decimal / base);         // what does this do?
-        } while (decimal > 0);                  // why while at the end? what is ~~?
-        // loop to pad with zeros
-        if (base === 2) {                        // only pad for binary conversions
-        for (let i = 0; conversion.length < BITS; i++) {
-            conversion = "0" + conversion;
-        }
-        }
-        return conversion;
-    }
+## 3.6 
+&gt; Write conditional statements
 
-    // toggle selected bit and recalculate
-    function toggleBit(i) {
-        //alert("Digit action: " + i );
-        const dig = document.getElementById('digit' + i);
-        const image = document.getElementById('bulb' + i);
-        const butt = document.getElementById('butt' + i);
-        // Change digit and visual
-        if (image.src.match(IMAGE_ON)) {
-        dig.value = 0;
-        image.src = IMAGE_OFF;
-        butt.innerHTML = MSG_ON;
-        } else {
-        dig.value = 1;
-        image.src = IMAGE_ON;
-        butt.innerHTML = MSG_OFF;
-        }
-        // Binary numbers
-        const binary = getBits();
-        setConversions(binary);
+### Vocab and Big Ideas
+- *Algorithm*: Finite set of instructions that accomplish a specific task
+- *Conditional Statements*: allow the code to act based on multiple conditions, such as user input or stored data
+- use in order to receive different outputs from a set of code, and help achieve the general purpose of the algorithm
+- *Categories*: 2 broad types of conditional statements are if statements and if-else statements
+- *if statement*: will go through certain statements if the if expression is true
+- *if-else statement*: will go through a statement no matter what, but the statement which is run depends on the if expression is true or false
+
+## 3.7 
+&gt; Write nested conditional statements, determine the result of them
+
+### Vocab and Big Ideas
+- *Nested conditional*: A conditional inside of a conditional. Used in algorithms in order to print specific data or run certain tasks, to create further conditions in algorithms.
+We can use flowcharts to help display an easy to understand diagram of what we want a code segment to do.
+
+---
+
+# 3.5 Hacks
+
+## Binary Practice
+Using psuedocode operators determine if the statements are true or false. The number type will be indicated in parentheses.
+
+**1. 90(Decimal) = 1000(Binary)**
+
+- A. True
+- B. False
+
+- Answer: B False
+
+**2. 10(D) ≠ 0110(B)**
+
+- A. True
+- B. False
+
+- Answer: A True 
+
+**3. 56(D) ≥ 111000(B)**
+
+- A. True
+- B. False
+
+- Answer: A True
+
+**3. 99(D) &lt; 1110011(B)**
+
+- A. True
+- B. False
+
+- Answer: A True 
+Now, complete the binary truth tables
+<html>
+<style>
+    table, th, td { 
+        border:2px solid white;
     }
-    // add is positive integer, subtract is negative integer
-    function add(n) {
-        let binary = getBits();
-        // convert to decimal and do math
-        let decimal = parseInt(binary, 2);
-        if (n > 0) {  // PLUS
-        decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-        } else  {     // MINUS
-        decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
-        }
-        // convert the result back to binary
-        binary = decimal_2_base(decimal, 2);
-        // update conversions
-        setConversions(binary);
-        // update bits
-        for (let i = 0; i < binary.length; i++) {
-        let digit = binary.substr(i, 1);
-        document.getElementById('digit' + i).value = digit;
-        if (digit === "1") {
-            document.getElementById('bulb' + i).src = IMAGE_ON;
-            document.getElementById('butt' + i).innerHTML = MSG_OFF;
-        } else {
-            document.getElementById('bulb' + i).src = IMAGE_OFF;
-            document.getElementById('butt' + i).innerHTML = MSG_ON;
-        }
-        }
-    }
+</style>
+    <div>AND Operator</div>
+    <div>
+        <table>
+            <tr>
+                <th>Value 1</th>
+                <th>Value 2</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+    <div>OR Operator</div>
+    <div>
+        <table>
+            <tr>
+                <th>Value 1</th>
+                <th>Value 2</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+    <div>Not operator</div>
+    <div>
+        <table>
+            <tr>
+                <th>Not</th>
+                <th>Value</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Not</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Not</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+</html>
+## Python Practice
+# Testing out relational operators
+# Practice with these statements
 
+print(20 &lt; 20) # How can you change the operator to print a value of False?
 
-</script>
+x = 30
+y = 20
+z = 10
+print(x &gt;= y + z) # How can this return true by only manipulating the operator?
 
+x = 30 
+z = 30 
+
+print(x == z) # Change values to return true
+
+# 3.6 Hacks
+
+## AP Prep
+
+**1. What is displayed by this code?**
+- result &lt;-- 75
+- IF result &lt; 80 {
+    DISPLAY("Please schedule a retake.")
+}  
+- ELSE {
+    DISPLAY("Nice job!")
+}
+
+1. Nice job!
+2. Display
+3. Please schedule a retake.
+4. 75
+
+-  3 "Please schedule a retake." Because the if condition is met, 75 &lt; 80 so the if display is shown.
+
+**2. How is an if statement different from an if-else statement.**
+
+1. Extra words.
+2. An if statement will only go through a process if a condition is met. An if-else statement will go through code no matter the conditions.
+3. They are the exact same.
+4. An if statement will go through the entire code segment every single time and the if-else statement is always used in an algorithm, no matter the conditions.
+
+-  2 Because in if statements the criteria needs to be made in order to go through the code. 
+
+**3. What would be most appropriate for this situation? Ben wants to check his bank account. If his car fuel is full, he will go to the bank. Otherwise, he will go home. If he goes to the bank, he will withdraw money only if his balance is above $1000.**
+
+1. If statement
+2. If-else statement
+
+-  2 If-else, because if he has gas he will go to the bank BUT else (gas is not full) he will go home.
+
+**4. What would be most appropriate for this situation? Luke wants to play basketball. If it is sunny outside he will go to the park to play basketball.**
+
+1. If statement
+2. If-else statement
+
+-  1 as there is no second option. It does not specify what Luke will do on a day when it is not sunny.
+
+## Using Python
+animals = ["lion", "tiger", "wildebeest", "shark", "jellyfish", "blobfish", "raven"]
+
+for i in animals:
+    if i == "shark": # What boolean value does this statement cause? Answer: True
+        print("Fun Fact: The smallest shark is the dwarf lantern shark, and it is small enough to hold in your hand!")
+    else:
+        print(i)
+
+for i in animals:
+    if i == "lion" or "wildebeest" or "raven":
+        print("This animal lives in the desert")
+    else: 
+        print(i + " This animal does not live in the desert")
+# Practice
+# Using only one more if statement, alter the code to print out a statement saying if an animal lives in the desert, based on booleans
+# 3.7 Hacks
+
+## Exercise 1
+- Create dictionaries for multiple food items, with the listed specifications
+    - Chicken Alfredo, Meat: Chicken, Time to Prepare: 60 minutes
+    - Cheese Quesadilla, Meat: None, Time to Prepare: 10 minutes
+    - Beef Wellington, Meat: Beef, Time to Prepare: 150 minutes
+- Used nested conditionals, determine which meal you can cook, given that a) you have no meat at home, and b) you only have 30 minutes to make the meal
+# Write code here
+
+chickenAlfredo = {
+    "meat": True, 
+    "Time": 60,
+}
+
+cheeseQuesadilla = {
+    "meat": False, 
+    "Time": 10,
+}
+
+beefWellington = {
+    "meat": True,
+    "Time": 150,
+}
+
+def cookMeal(dish):
+    if dish["Time"] &lt;= 30: 
+        if dish["meat"] == False:
+            print("You can cook the meal!")
+        else:
+            print("You do not have enough time and cannot cook the meal!" )
+    else:
+        print("You do not have meat and cannot cook the meal!")
+
+cookMeal(chickenAlfredo)
+cookMeal(cheeseQuesadilla)
+cookMeal(beefWellington)
+        
+## Exercise 2
+
+Make a flowchart and write pseudocode for the following scenario.
+- Mr. Yeung would like to grade live reviews. 
+- He wants to see if each student has at least 2 issues on their project. If they don't they receive a score of 2.0.
+- If they have at least 2 issues, check that they have completed at least 5 of their scrumboard tasks.
+- If they have completed 5 scrumboard tasks, give the student a 2.7. If they have not completed 5 scrumboard tasks, give them a score of 2.5. If they have completed more than 5 tasks, give them a score of 3.0.
+- How much would a student with 3 issues and 1 complete scrumboard task receive?
+![Alt text](../images/images/flowchart.png)
+A student with 3 issues and 1 completed scrumboard task would receive a 2.5.
+</html>
 
       </div>
     </main><footer class="site-footer h-card">
