@@ -27,8 +27,9 @@ Binary Numbers: Unsigned Integer, Signed Integer, Floating Point : Floating poin
 Binary Data Abstractions: Boolean, ASCII, Unicode, RGB - these are various representations of binary, ASCII is characters, unicode and RGB are colors, booleans are 1s and 0, on and off
 
 Data Compression: Lossy, Lossless (not discussed yet) : lossy is compressing, but you may lose data. Lossless is the opposite, as it does not lose data.
--------------------
+
 Unit 3… Algorithm/Programming Terms - 
+---------------
 
 Variables, Data Types, Assignment Operators : Variables are variable holders of values, data types are the types of what they can be, and assignment operators assign values to variables
 
