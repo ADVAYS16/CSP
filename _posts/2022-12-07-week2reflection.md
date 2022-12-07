@@ -3,7 +3,7 @@ title: Unit 3 Section 5-10 Reflection
 layout: default
 description: My Reflection!
 categories: []
-tags: [html, liquid, javascript]
+tags: [html]
 ---
 
 # What I Received
