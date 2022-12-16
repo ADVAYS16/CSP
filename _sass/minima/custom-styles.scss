@@ -1,15 +1,15 @@
 $high-emph: rgba(white, 0.87);
 $med-emph: rgba(white, 0.69); //Noicee
 $low-emph: rgba(white, 0.38);
-$dark-grey : #95b288;
+$green : #95b288;
 $black: #111827
 // $dark-grey : #1F1B24;
-$overlay: mix($dark-grey, rgb(0, 0, 0), 95%);
-$overlay-light: mix($dark-grey, rgb(0, 0, 0), 86%);
+$overlay: mix($green, rgb(0, 0, 0), 95%);
+$overlay-light: mix($green, rgb(0, 0, 0), 86%);
 
 html, body, input, textarea, select, button {   
   color: $high-emph !important;
-  background-color: $dark-grey !important;
+  background-color: $green !important;
 }
 
 a {
@@ -25,17 +25,17 @@ a:hover {
 }
 
 .site-nav {
-    background-color: $dark-grey;
-    border-color: $dark-grey $overlay-light;
+    background-color: $green;
+    border-color: $green $overlay-light;
 }
 
 * {
-    scrollbar-color: $dark-grey $overlay-light;
+    scrollbar-color: $green $overlay-light;
 }
 
 pre, code {
     // BVas a lighter colour to better highlight short code words
-    border-color: $dark-grey $overlay-light;
+    border-color: $green $overlay-light;
     background-color: $overlay;
 }
 
@@ -44,7 +44,7 @@ pre, code {
 }
 
 .post-meta {
-    color: $dark-grey;
+    color: $green;
 }
 
 .post-content p, .post-content li {
@@ -58,7 +58,7 @@ pre, code {
 }
 
 .btn:hover {
-    background-color: $dark-grey !important;
+    background-color: $green !important;
 }
 
 table th{
@@ -68,13 +68,13 @@ table th{
 }
 
 table td{
-    background-color: $dark-grey;
+    background-color: $green;
     border-color: $overlay-light;
     color: $med-emph;
 }
 
 .flash {
-    color: $dark-grey !important;
+    color: $green !important;
     filter: brightness(80%);
 }
 
