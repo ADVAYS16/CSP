@@ -327,11 +327,11 @@ a:hover { color: rgba(255, 255, 255, 0.87) !important; }
 
 .site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.87) !important; }
 
-.site-nav { background-color: #95b288; border-color: #809975; }
+.site-nav { background-color: #95b288; border-color: #95b288 #809975; }
 
 * { scrollbar-color: #95b288 #809975; }
 
-pre, code { border-color: #809975; background-color: #8ea981; }
+pre, code { border-color: #95b288 #809975; background-color: #8ea981; }
 
 .page-description { color: rgba(255, 255, 255, 0.69); }
 
