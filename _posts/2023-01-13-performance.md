@@ -5,17 +5,11 @@ description: Grading videos based on Collegeboard scoring criteria
 categories: [markdown]
 title: Performance Task Scoring 2
 ---
-</style>
-</head>
-<body>
-
 
 
 <h1>Video 1 Grading</h1>
 
 <table>
-  </tr>
-  <tr>
     <td>Program Purpose and Function</td>
     <td>1</td>
     <td>0</td>
@@ -54,7 +48,6 @@ title: Performance Task Scoring 2
 </table>
 
 </body>
-</html>
 
 
 
@@ -200,9 +193,9 @@ title: Performance Task Scoring 2
   </tr>
   <tr>
     <td>Row 6 Testing</td>
-    <td>The response described the conditions being tested, rather than two different arguments that trigger different code execution. CB also mentioned that arguments should be specific values used in the procedure call.</td>
+    <td>1</td>
     <td>0</td>
-    <td> </td>
+    <td>The response described the conditions being tested, rather than two different arguments that trigger different code execution. CB also mentioned that arguments should be specific values used in the procedure call.</td>
   </tr>
 </table>
 
