@@ -57,7 +57,7 @@ window.onload = wrap_img;
 </head>
 <body><header class="site-header">
 
-  <div class="wrapper">
+    <div class="wrapper">
 <a class="site-title" rel="author" href="/CSP-/">Advay's Fastpages</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
@@ -67,14 +67,28 @@ window.onload = wrap_img;
             </svg>
           </span>
         </label>
-
+  
         <div class="trigger">
-<a class="page-link" href="/CSP-/Submenu">Submenu</a><a class="page-link" href="/CSP-/Vocab/">Vocab Page</a><a class="page-link" href="/CSP-/about/">About Me</a><a class="page-link" href="/CSP-/search/">Search</a><a class="page-link" href="/CSP-/categories/">Tags</a>
-</div>
+<a class="page-link" href="/CSP-/Submenu">Submenu</a><a class="page-link" href="/CSP-/Vocab/">Vocab Page</a><a class="page-link" href="/CSP-/about/">About Me</a><a class="page-link" href="/CSP-/search/">Search</a><a class="page-link" href="/CSP-/categories/">Tags</a><p id="time" class="page-link">Current time: </p>
+        </div>
       </nav>
 </div>
-</header>
-<main class="page-content" aria-label="Content">
+  </header>
+  
+  <script>
+    let timeElement = document.getElementById('time')
+  
+    clock();
+  
+    function clock() {
+      let date = new Date();
+      const date_time = date.toLocaleString().split(",");
+      console.log(date_time)
+      timeElement.innerHTML = date_time[1].replace(/\s/g, '');
+    }
+  
+    setInterval(clock, 1000)
+  </script><main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
