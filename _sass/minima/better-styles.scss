@@ -1,5 +1,5 @@
-$high-emph: #087E8B;
-$med-emph: #0ABAB5;
+$high-emph: #0ABAB5;
+$med-emph: #087E8B;
 $low-emph: #E6E6E6;
 $dark-grey: #3A3A3A;
 
@@ -10,15 +10,6 @@ $accent: #6a4792;
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
-{
-font-family: "Inter", sans-serif !important;
-}
-@supports (font-variation-settings: normal) {
-{
-font-family: "Inter var", sans-serif !important;
-}
-}
-html,
 body,
 input,
 textarea,
@@ -26,16 +17,19 @@ select,
 button {
 color: $high-emph !important;
 background-color: $dark-grey !important;
+font-family: "Inter", sans-serif;
 }
+
 .site-title,
-.site-title:visited,
-.site-nav,
+.site-nav a,
 .page-link {
 color: $high-emph !important;
 font-weight: bolder !important;
+text-decoration: none;
 }
-:hover.site-title,
-:hover.a .page-link {
+
+.site-title:hover,
+.page-link:hover {
 text-decoration: underline;
 }
 
@@ -44,12 +38,8 @@ background-color: $dark-grey;
 border-color: #1d1d1d !important;
 }
 
-{
-scrollbar-color: $dark-grey $overlay-light;
-}
 pre,
 code {
-// BVas a lighter colour to better highlight short code words
 border-color: $overlay-light;
 background-color: #161616;
 color: hsl(0, 0%, 93%);
@@ -79,22 +69,19 @@ background-color: $dark-grey !important;
 }
 
 table {
-position: sticky;
 overflow: hidden;
+background-color: $dark-grey;
 }
 
 table th {
 border-color: $overlay-light;
 color: $high-emph;
 background-color: #161616;
-background-color: $dark-grey;
 }
 
 table td {
-background-color: $dark-grey;
 border-color: $overlay-light;
 color: $med-emph;
-backdrop-filter: blur(4px);
 }
 
 .flash {
@@ -105,6 +92,3 @@ filter: brightness(80%);
 canvas {
 filter: invert(100%);
 }
-
-.post-list > li > div {
-box-shadow:
