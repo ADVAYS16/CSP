@@ -5,7 +5,7 @@ $dark-grey: #3A3A3A;
 
 $overlay: #C1C1E0;
 $overlay-light: #F2E2FF;
-$accent: #6a4792;
+$accent: #0ABAB5;
 
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
@@ -15,15 +15,15 @@ input,
 textarea,
 select,
 button {
-color: $high-emph !important;
-background-color: $dark-grey !important;
+color: $accent !important;
+background-color: #FFFFFF !important;
 font-family: "Inter", sans-serif;
 }
 
 .site-title,
 .site-nav a,
 .page-link {
-color: $high-emph !important;
+color: $accent !important;
 font-weight: bolder !important;
 text-decoration: none;
 }
@@ -34,15 +34,15 @@ text-decoration: underline;
 }
 
 .site-nav {
-background-color: $dark-grey;
-border-color: #1d1d1d !important;
+background-color: #FFFFFF;
+border-color: #FFFFFF !important;
 }
 
 pre,
 code {
 border-color: $overlay-light;
-background-color: #161616;
-color: hsl(0, 0%, 93%);
+background-color: #FFFFFF;
+color: $accent;
 }
 
 .page-description {
@@ -55,33 +55,33 @@ color: $low-emph;
 
 .post-content p,
 .post-content li {
-color: $med-emph;
+color: $accent;
 }
 
 .btn {
 background-color: $overlay !important;
-color: $high-emph !important;
+color: $accent !important;
 border-color: $overlay-light !important;
 }
 
 .btn:hover {
-background-color: $dark-grey !important;
+background-color: $accent !important;
 }
 
 table {
 overflow: hidden;
-background-color: $dark-grey;
+background-color: #FFFFFF;
 }
 
 table th {
 border-color: $overlay-light;
-color: $high-emph;
-background-color: #161616;
+color: $accent;
+background-color: #FFFFFF;
 }
 
 table td {
 border-color: $overlay-light;
-color: $med-emph;
+color: $accent;
 }
 
 .flash {
