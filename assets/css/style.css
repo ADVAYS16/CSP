@@ -437,23 +437,23 @@ body, input, textarea, select, button { color: #0ABAB5 !important; background-co
 
 .site-nav { background-color: #FFFFFF; border-color: #FFFFFF !important; }
 
-pre, code { border-color: #F2E2FF; background-color: #FFFFFF; color: #0ABAB5; }
+pre, code { border-color: #F2F2F2; background-color: #FFFFFF; color: #0ABAB5; }
 
 .page-description { color: #087E8B; }
 
-.post-meta { color: #E6E6E6; }
+.post-meta { color: #D9D9D9; }
 
 .post-content p, .post-content li { color: #0ABAB5; }
 
-.btn { background-color: #C1C1E0 !important; color: #0ABAB5 !important; border-color: #F2E2FF !important; }
+.btn { background-color: #E6E6E6 !important; color: #0ABAB5 !important; border-color: #F2F2F2 !important; }
 
 .btn:hover { background-color: #0ABAB5 !important; }
 
 table { overflow: hidden; background-color: #FFFFFF; }
 
-table th { border-color: #F2E2FF; color: #0ABAB5; background-color: #FFFFFF; }
+table th { border-color: #F2F2F2; color: #0ABAB5; background-color: #FFFFFF; }
 
-table td { border-color: #F2E2FF; color: #0ABAB5; }
+table td { border-color: #F2F2F2; color: #0ABAB5; }
 
 .flash { color: #3A3A3A !important; filter: brightness(80%); }
 
