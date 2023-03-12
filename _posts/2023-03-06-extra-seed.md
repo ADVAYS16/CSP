@@ -1,7 +1,7 @@
 ---
 keywords: fastai
 description: Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels.  College Board requires you to learn about Lossy and Lossless compression.  
-title: Extra Seed
+title: Data Compression
 toc: true
 image: /images/python.png
 categories: []
