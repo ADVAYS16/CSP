@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Week 25:2.3 Pandas | Advay’s Fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Week 25:2.3 Pandas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://advays16.github.io/CSP-/2023/03/09/panda.html" />
+<meta property="og:url" content="https://advays16.github.io/CSP-/2023/03/09/panda.html" />
+<meta property="og:site_name" content="Advay’s Fastpages" />
+<meta property="og:image" content="https://advays16.github.io/CSP-/images/python.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-09T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://advays16.github.io/CSP-/images/python.png" />
+<meta property="twitter:title" content="Week 25:2.3 Pandas" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T00:00:00-06:00","datePublished":"2023-03-09T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Week 25:2.3 Pandas","image":"https://advays16.github.io/CSP-/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://advays16.github.io/CSP-/2023/03/09/panda.html"},"url":"https://advays16.github.io/CSP-/2023/03/09/panda.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSP-/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://advays16.github.io/CSP-/feed.xml" title="Advay's Fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/CSP-/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/CSP-/"}}">Advay&#39;s Fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path
+                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+            </svg>
+          </span>
+        </label>
+  
+        <div class="trigger"><a class="page-link" href="/CSP-/Submenu">Submenu</a><a class="page-link" href="/CSP-/Vocab/">Vocab Page</a><a class="page-link" href="/CSP-/about/">About Me</a><a class="page-link" href="/CSP-/search/">Search</a><a class="page-link" href="/CSP-/categories/">Tags</a><p id="time" class="page-link">Current time: </p>
+        </div>
+      </nav></div>
+  </header>
+  
+  <script>
+    let timeElement = document.getElementById('time')
+  
+    clock();
+  
+    function clock() {
+      let date = new Date();
+      const date_time = date.toLocaleString().split(",");
+      console.log(date_time)
+      timeElement.innerHTML = date_time[1].replace(/\s/g, '');
+    }
+  
+    setInterval(clock, 1000)
+  </script><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-09-panda.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">nba_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./player_data.csv&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nba_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nba_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                     name  year_start  year_end position height  weight  \
+0          Alaa Abdelnaby        1991      1995      F-C   6-10   240.0   
+1         Zaid Abdul-Aziz        1969      1978      C-F    6-9   235.0   
+2     Kareem Abdul-Jabbar        1970      1989        C    7-2   225.0   
+3      Mahmoud Abdul-Rauf        1991      2001        G    6-1   162.0   
+4       Tariq Abdul-Wahad        1998      2003        F    6-6   223.0   
+...                   ...         ...       ...      ...    ...     ...   
+4545           Ante Zizic        2018      2018      F-C   6-11   250.0   
+4546             Jim Zoet        1983      1983        C    7-1   240.0   
+4547            Bill Zopf        1971      1971        G    6-1   170.0   
+4548          Ivica Zubac        2017      2018        C    7-1   265.0   
+4549           Matt Zunic        1949      1949      G-F    6-3   195.0   
+
+             birth_date                                college  
+0         June 24, 1968                        Duke University  
+1         April 7, 1946                  Iowa State University  
+2        April 16, 1947  University of California, Los Angeles  
+3         March 9, 1969             Louisiana State University  
+4      November 3, 1974              San Jose State University  
+...                 ...                                    ...  
+4545    January 4, 1997                                    NaN  
+4546  December 20, 1953                  Kent State University  
+4547       June 7, 1948                    Duquesne University  
+4548     March 18, 1997                                    NaN  
+4549  December 19, 1919           George Washington University  
+
+[4550 rows x 8 columns]
+Index([&#39;name&#39;, &#39;year_start&#39;, &#39;year_end&#39;, &#39;position&#39;, &#39;height&#39;, &#39;weight&#39;,
+       &#39;birth_date&#39;, &#39;college&#39;],
+      dtype=&#39;object&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the above code we simply view the Player Data and the columns associated with the Data Set. We are outputted with the head and the tail end of the data. The information is difficult to read and therefore must be preprocessed before analyzed. We can also see the immense length of the data set as there are 4550 rows of information. Therefore we must limit the rows being analyzed as 4550 will require too much time and energy.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+
+<span class="n">nba_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./player_data.csv&#39;</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">nba_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;birth_date&#39;</span><span class="p">,</span> <span class="s1">&#39;college&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">nba_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Encode categorical variables</span>
+<span class="n">enc</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">enc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">nba_data</span><span class="p">[[</span><span class="s1">&#39;position&#39;</span><span class="p">]])</span>
+<span class="n">onehot</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">nba_data</span><span class="p">[[</span><span class="s1">&#39;position&#39;</span><span class="p">]])</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;position_&#39;</span> <span class="o">+</span> <span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">enc</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">([</span><span class="s1">&#39;position&#39;</span><span class="p">])]</span>
+<span class="n">nba_data</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">onehot</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+<span class="n">nba_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;position&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">nba_data</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nba_data</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="mi">12</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">nba_data</span><span class="p">)</span>
+
+<span class="c1"># Calculate the average height and weight</span>
+<span class="n">avg_height</span> <span class="o">=</span> <span class="n">nba_data</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">avg_weight</span> <span class="o">=</span> <span class="n">nba_data</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Print the average height and weight</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average height: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">avg_height</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2"> inches&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average weight: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">avg_weight</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2"> pounds&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                   name  year_start  year_end  height  weight  \
+0        Alaa Abdelnaby        1991      1995      82     240   
+1       Zaid Abdul-Aziz        1969      1978      81     235   
+2   Kareem Abdul-Jabbar        1970      1989      86     225   
+3    Mahmoud Abdul-Rauf        1991      2001      73     162   
+4     Tariq Abdul-Wahad        1998      2003      78     223   
+5   Shareef Abdur-Rahim        1997      2008      81     225   
+6         Tom Abernethy        1977      1981      79     220   
+7           Forest Able        1957      1957      75     180   
+8        John Abramovic        1947      1948      75     195   
+9          Alex Abrines        2017      2018      78     190   
+10           Alex Acker        2006      2009      77     185   
+11         Don Ackerman        1954      1954      72     183   
+12           Mark Acres        1988      1993      83     220   
+13            Bud Acton        1968      1968      78     210   
+14           Quincy Acy        2013      2018      79     240   
+
+    position_position_C  position_position_C-F  position_position_F  \
+0                   0.0                    0.0                  0.0   
+1                   0.0                    1.0                  0.0   
+2                   1.0                    0.0                  0.0   
+3                   0.0                    0.0                  0.0   
+4                   0.0                    0.0                  1.0   
+5                   0.0                    0.0                  1.0   
+6                   0.0                    0.0                  1.0   
+7                   0.0                    0.0                  0.0   
+8                   0.0                    0.0                  1.0   
+9                   0.0                    0.0                  0.0   
+10                  0.0                    0.0                  0.0   
+11                  0.0                    0.0                  0.0   
+12                  0.0                    0.0                  0.0   
+13                  0.0                    0.0                  1.0   
+14                  0.0                    0.0                  1.0   
+
+    position_position_F-C  position_position_G  position_position_G-F  
+0                     1.0                  0.0                    0.0  
+1                     0.0                  0.0                    0.0  
+2                     0.0                  0.0                    0.0  
+3                     0.0                  1.0                    0.0  
+4                     0.0                  0.0                    0.0  
+5                     0.0                  0.0                    0.0  
+6                     0.0                  0.0                    0.0  
+7                     0.0                  1.0                    0.0  
+8                     0.0                  0.0                    0.0  
+9                     0.0                  0.0                    1.0  
+10                    0.0                  1.0                    0.0  
+11                    0.0                  1.0                    0.0  
+12                    1.0                  0.0                    0.0  
+13                    0.0                  0.0                    0.0  
+14                    0.0                  0.0                    0.0  
+Average height: 78.47 inches
+Average weight: 208.87 pounds
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/advayshindikar/opt/anaconda3/lib/python3.9/site-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the above code I was able to process the information and drop 2 of the columns to shorten the data. I was also able to encode the categorical variables in order to view the data better. Finally I converted the height and weight column to inches and pounds so that it could be compared and so that I can take the average. I found that when working on this data set, it needed a counter as it was not able to iterate through 4550 rows. To fix this I had to set a limit of the first 100 rows.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Load data</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./Seasons_Stats.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Drop unnecessary columns</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Fill missing values</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Convert data types</span>
+<span class="n">season_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># Print cleaned data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">season_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">season_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>       Year             Player  Pos   Age   Tm     G    GS      MP   PER  \
+0      1950    Curly Armstrong  G-F  31.0  FTW  63.0   0.0     0.0   0.0   
+1      1950       Cliff Barker   SG  29.0  INO  49.0   0.0     0.0   0.0   
+2      1950      Leo Barnhorst   SF  25.0  CHS  67.0   0.0     0.0   0.0   
+3      1950         Ed Bartels    F  24.0  TOT  15.0   0.0     0.0   0.0   
+4      1950         Ed Bartels    F  24.0  DNN  13.0   0.0     0.0   0.0   
+...     ...                ...  ...   ...  ...   ...   ...     ...   ...   
+24686  2017        Cody Zeller   PF  24.0  CHO  62.0  58.0  1725.0  16.7   
+24687  2017       Tyler Zeller    C  27.0  BOS  51.0   5.0   525.0  13.0   
+24688  2017  Stephen Zimmerman    C  20.0  ORL  19.0   0.0   108.0   7.3   
+24689  2017        Paul Zipser   SF  22.0  CHI  44.0  18.0   843.0   6.9   
+24690  2017        Ivica Zubac    C  19.0  LAL  38.0  11.0   609.0  17.0   
+
+         TS%  ...    FT%    ORB    DRB    TRB    AST   STL   BLK   TOV     PF  \
+0      0.368  ...  0.705    0.0    0.0    0.0  176.0   0.0   0.0   0.0  217.0   
+1      0.435  ...  0.708    0.0    0.0    0.0  109.0   0.0   0.0   0.0   99.0   
+2      0.394  ...  0.698    0.0    0.0    0.0  140.0   0.0   0.0   0.0  192.0   
+3      0.312  ...  0.559    0.0    0.0    0.0   20.0   0.0   0.0   0.0   29.0   
+4      0.308  ...  0.548    0.0    0.0    0.0   20.0   0.0   0.0   0.0   27.0   
+...      ...  ...    ...    ...    ...    ...    ...   ...   ...   ...    ...   
+24686  0.604  ...  0.679  135.0  270.0  405.0   99.0  62.0  58.0  65.0  189.0   
+24687  0.508  ...  0.564   43.0   81.0  124.0   42.0   7.0  21.0  20.0   61.0   
+24688  0.346  ...  0.600   11.0   24.0   35.0    4.0   2.0   5.0   3.0   17.0   
+24689  0.503  ...  0.775   15.0  110.0  125.0   36.0  15.0  16.0  40.0   78.0   
+24690  0.547  ...  0.653   41.0  118.0  159.0   30.0  14.0  33.0  30.0   66.0   
+
+         PTS  
+0      458.0  
+1      279.0  
+2      438.0  
+3       63.0  
+4       59.0  
+...      ...  
+24686  639.0  
+24687  178.0  
+24688   23.0  
+24689  240.0  
+24690  284.0  
+
+[24691 rows x 52 columns]
+Index([&#39;Year&#39;, &#39;Player&#39;, &#39;Pos&#39;, &#39;Age&#39;, &#39;Tm&#39;, &#39;G&#39;, &#39;GS&#39;, &#39;MP&#39;, &#39;PER&#39;, &#39;TS%&#39;,
+       &#39;3PAr&#39;, &#39;FTr&#39;, &#39;ORB%&#39;, &#39;DRB%&#39;, &#39;TRB%&#39;, &#39;AST%&#39;, &#39;STL%&#39;, &#39;BLK%&#39;, &#39;TOV%&#39;,
+       &#39;USG%&#39;, &#39;blanl&#39;, &#39;OWS&#39;, &#39;DWS&#39;, &#39;WS&#39;, &#39;WS/48&#39;, &#39;blank2&#39;, &#39;OBPM&#39;, &#39;DBPM&#39;,
+       &#39;BPM&#39;, &#39;VORP&#39;, &#39;FG&#39;, &#39;FGA&#39;, &#39;FG%&#39;, &#39;3P&#39;, &#39;3PA&#39;, &#39;3P%&#39;, &#39;2P&#39;, &#39;2PA&#39;,
+       &#39;2P%&#39;, &#39;eFG%&#39;, &#39;FT&#39;, &#39;FTA&#39;, &#39;FT%&#39;, &#39;ORB&#39;, &#39;DRB&#39;, &#39;TRB&#39;, &#39;AST&#39;, &#39;STL&#39;,
+       &#39;BLK&#39;, &#39;TOV&#39;, &#39;PF&#39;, &#39;PTS&#39;],
+      dtype=&#39;object&#39;)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above code is the Season Data form 1951 to Present. Similar to the previous data set we can see that we have an extrordianry amount of rows and therefore must process the data in order to understand and analyze it.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Load data</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./Seasons_Stats.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Drop unnecessary columns</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Fill missing values</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Convert data types</span>
+<span class="n">season_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># Organize data by greatest points per game</span>
+<span class="n">ppg_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;PTS&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">ppg_data</span><span class="p">[</span><span class="s1">&#39;PPG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">ppg_data</span><span class="p">[</span><span class="s1">&#39;PTS&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">ppg_data</span><span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ppg_data</span> <span class="o">=</span> <span class="n">ppg_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PPG&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Top 10 Leaders in PPG:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ppg_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;PPG&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Organize data by greatest steals per game</span>
+<span class="n">spg_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;STL&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">spg_data</span><span class="p">[</span><span class="s1">&#39;SPG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">spg_data</span><span class="p">[</span><span class="s1">&#39;STL&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">spg_data</span><span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">spg_data</span> <span class="o">=</span> <span class="n">spg_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SPG&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Top 10 Leaders in SPG:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">spg_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;SPG&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Organize data by greatest assists per game</span>
+<span class="n">apg_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;AST&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">apg_data</span><span class="p">[</span><span class="s1">&#39;APG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">apg_data</span><span class="p">[</span><span class="s1">&#39;AST&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">apg_data</span><span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">apg_data</span> <span class="o">=</span> <span class="n">apg_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;APG&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Top 10 Leaders in APG:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">apg_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;APG&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Organize data by greatest blocks per game</span>
+<span class="n">bpg_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;BLK&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">bpg_data</span><span class="p">[</span><span class="s1">&#39;BPG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">bpg_data</span><span class="p">[</span><span class="s1">&#39;BLK&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">bpg_data</span><span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">bpg_data</span> <span class="o">=</span> <span class="n">bpg_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;BPG&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Top 10 Leaders in BPG:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bpg_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;BPG&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Organize data by greatest rebounds per game</span>
+<span class="n">rpg_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;TRB&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">rpg_data</span><span class="p">[</span><span class="s1">&#39;RPG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">rpg_data</span><span class="p">[</span><span class="s1">&#39;TRB&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">rpg_data</span><span class="p">[</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">rpg_data</span> <span class="o">=</span> <span class="n">rpg_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;RPG&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Top 10 Leaders in RPG:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rpg_data</span><span class="p">[[</span><span class="s1">&#39;Player&#39;</span><span class="p">,</span> <span class="s1">&#39;Pos&#39;</span><span class="p">,</span> <span class="s1">&#39;Tm&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;RPG&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Top 10 Leaders in PPG:
+                  Player Pos   Tm  Year   PPG
+24409  Wilt Chamberlain*   C  PHW  1962  50.4
+24410  Wilt Chamberlain*   C  SFW  1963  44.8
+24412  Wilt Chamberlain*   C  SFW  1965  38.9
+24408  Wilt Chamberlain*   C  PHW  1961  38.4
+7813       Elgin Baylor*  SF  LAL  1962  38.2
+24407  Wilt Chamberlain*   C  PHW  1960  37.6
+16750    Michael Jordan*  SG  CHI  1987  37.1
+24411  Wilt Chamberlain*   C  SFW  1964  36.8
+19666        Rick Barry*  SF  SFW  1967  35.6
+14333        Kobe Bryant  SG  LAL  2006  35.4
+
+Top 10 Leaders in SPG:
+                Player Pos   Tm  Year  SPG
+641    Alvin Robertson  SG  SAS  1986  3.7
+22834    Tom Gugliotta  PF  WSB  1995  3.5
+6855          Don Buse  PG  IND  1977  3.5
+15594   Magic Johnson*  SG  LAL  1981  3.4
+12759   John Stockton*  PG  UTA  1989  3.2
+21545      Slick Watts  PG  SEA  1976  3.2
+642    Alvin Robertson  SG  SAS  1987  3.2
+16844      Micheal Ray  SG  NYK  1980  3.2
+16751  Michael Jordan*  SG  CHI  1988  3.2
+16836      Micheal Ray  PG  GSW  1983  3.1
+
+Top 10 Leaders in APG:
+               Player Pos   Tm  Year   APG
+12760  John Stockton*  PG  UTA  1990  14.5
+12761  John Stockton*  PG  UTA  1991  14.2
+10132   Isiah Thomas*  PG  DET  1985  13.9
+12758  John Stockton*  PG  UTA  1988  13.8
+12762  John Stockton*  PG  UTA  1992  13.7
+12759  John Stockton*  PG  UTA  1989  13.6
+14150    Kevin Porter  PG  DET  1979  13.4
+15585  Magic Johnson*  PG  LAL  1984  13.1
+6333   Deron Williams  PG  NJN  2011  12.8
+15590  Magic Johnson*  PG  LAL  1989  12.8
+
+Top 10 Leaders in BPG:
+                 Player Pos   Tm  Year  BPG
+7768        Edy Tavares   C  CLE  2017  6.0
+15984        Mark Eaton   C  UTA  1985  5.6
+15711        Manute Bol   C  WSB  1986  5.0
+19155   Rasheed Wallace  PF  ATL  2004  5.0
+7864       Elmore Smith   C  LAL  1974  4.9
+9562   Hakeem Olajuwon*   C  HOU  1990  4.6
+15985        Mark Eaton   C  UTA  1986  4.6
+6703   Dikembe Mutombo*   C  DEN  1996  4.5
+5887    David Robinson*   C  SAS  1992  4.5
+22455      Theo Ratliff   C  POR  2004  4.4
+
+Top 10 Leaders in RPG:
+                  Player Pos   Tm  Year   RPG
+24408  Wilt Chamberlain*   C  PHW  1961  27.2
+24407  Wilt Chamberlain*   C  PHW  1960  27.0
+24409  Wilt Chamberlain*   C  PHW  1962  25.6
+1953       Bill Russell*   C  BOS  1964  24.7
+24404  Wilt Chamberlain*   C  PHI  1966  24.6
+24410  Wilt Chamberlain*   C  SFW  1963  24.3
+24405  Wilt Chamberlain*   C  PHI  1967  24.2
+1954       Bill Russell*   C  BOS  1965  24.1
+1949       Bill Russell*   C  BOS  1960  24.0
+1950       Bill Russell*   C  BOS  1961  23.9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Load data</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./Seasons_Stats.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Drop unnecessary columns</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Fill missing values</span>
+<span class="n">season_data</span> <span class="o">=</span> <span class="n">season_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Convert data types</span>
+<span class="n">season_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># Filter data to include only relevant columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">season_data</span><span class="p">[[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;PTS&#39;</span><span class="p">,</span> <span class="s1">&#39;AST&#39;</span><span class="p">,</span> <span class="s1">&#39;TRB&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Compute correlations between variables</span>
+<span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="c1"># Create linear regression plot for points and assists</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;PTS&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;AST&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Set title and axes labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Points vs. Assists&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Points&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Assists&#39;</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Fontconfig warning: ignoring UTF-8: not a valid region tag
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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" />
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I tried to have a graph with Assists and Points to see the correlation between Great Scorers and Great Team Players. However this does not help at all as this graph is simply a clump of data. I would like to learn more about how I can analyze the data and create a more accurate graph.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSP-/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://advays16.github.io/CSP-/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSP-/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
