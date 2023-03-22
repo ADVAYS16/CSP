@@ -159,12 +159,15 @@ window.onload = wrap_img;
 <span class="n">add_movie</span><span class="p">(</span><span class="s2">&quot;Forrest Gump&quot;</span><span class="p">,</span> <span class="s2">&quot;Robert Zemeckis&quot;</span><span class="p">,</span> <span class="mi">1994</span><span class="p">)</span>
 <span class="n">add_movie</span><span class="p">(</span><span class="s2">&quot;Invictus&quot;</span><span class="p">,</span> <span class="s2">&quot;Clint Eastwood&quot;</span><span class="p">,</span> <span class="mi">2009</span><span class="p">)</span>
 <span class="n">add_movie</span><span class="p">(</span><span class="s2">&quot;The Sting&quot;</span><span class="p">,</span> <span class="s2">&quot;George Roy Hill&quot;</span><span class="p">,</span> <span class="mi">1974</span><span class="p">)</span>
+<span class="n">add_movie</span><span class="p">(</span><span class="s2">&quot;Far Away&quot;</span><span class="p">,</span> <span class="s2">&quot;Ron Howard&quot;</span><span class="p">,</span> <span class="mi">1992</span><span class="p">)</span>
 
 <span class="c1"># Update the title and director of the movie with id 2</span>
 <span class="n">update_movie</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;The Godfather: Part II&quot;</span><span class="p">,</span> <span class="n">director</span><span class="o">=</span><span class="s2">&quot;Francis Ford Coppola&quot;</span><span class="p">)</span>
 
 <span class="c1"># Delete the movie with id 4</span>
 <span class="n">delete_movie</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">delete_movie</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
 <span class="c1"># Print all movies in the table</span>
 <span class="n">movies</span> <span class="o">=</span> <span class="n">get_all_movies</span><span class="p">()</span>
@@ -187,7 +190,6 @@ window.onload = wrap_img;
 (3, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
 (5, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
 (6, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
-(7, &#39;Inception&#39;, &#39;Christopher Nolan&#39;, 2010)
 (8, &#39;The Godfather&#39;, &#39;Francis Ford Coppola&#39;, 1972)
 (9, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
 (10, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
@@ -259,6 +261,44 @@ window.onload = wrap_img;
 (76, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
 (77, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
 (78, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
+(79, &#39;Inception&#39;, &#39;Christopher Nolan&#39;, 2010)
+(80, &#39;The Godfather&#39;, &#39;Francis Ford Coppola&#39;, 1972)
+(81, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
+(82, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
+(83, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
+(84, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
+(85, &#39;Inception&#39;, &#39;Christopher Nolan&#39;, 2010)
+(86, &#39;The Godfather&#39;, &#39;Francis Ford Coppola&#39;, 1972)
+(87, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
+(88, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
+(89, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
+(90, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
+(91, &#39;Inception&#39;, &#39;Christopher Nolan&#39;, 2010)
+(92, &#39;The Godfather&#39;, &#39;Francis Ford Coppola&#39;, 1972)
+(93, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
+(94, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
+(95, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
+(96, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
+(97, &#39;Far Away&#39;, &#39;Ron Howard&#39;, 1992)
+(98, &#39;Inception&#39;, &#39;Christopher Nolan&#39;, 2010)
+(99, &#39;The Godfather&#39;, &#39;Francis Ford Coppola&#39;, 1972)
+(100, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
+(101, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
+(102, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
+(103, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
+(105, &#39;Inception&#39;, &#39;Christopher Nolan&#39;, 2010)
+(106, &#39;The Godfather&#39;, &#39;Francis Ford Coppola&#39;, 1972)
+(107, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
+(108, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
+(109, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
+(110, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
+(112, &#39;Inception&#39;, &#39;Christopher Nolan&#39;, 2010)
+(113, &#39;The Godfather&#39;, &#39;Francis Ford Coppola&#39;, 1972)
+(114, &#39;The Shawshank Redemption&#39;, &#39;Frank Darabont&#39;, 1994)
+(115, &#39;Forrest Gump&#39;, &#39;Robert Zemeckis&#39;, 1994)
+(116, &#39;Invictus&#39;, &#39;Clint Eastwood&#39;, 2009)
+(117, &#39;The Sting&#39;, &#39;George Roy Hill&#39;, 1974)
+(118, &#39;Far Away&#39;, &#39;Ron Howard&#39;, 1992)
 </pre>
 </div>
 </div>
