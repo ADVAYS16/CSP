@@ -4,9 +4,9 @@
         "post0": {
             "title": "MCQ",
             "content": "",
-            "url": "https://advays16.github.io/CSP-/2023/04/01/mc4.html",
-            "relUrl": "/2023/04/01/mc4.html",
-            "date": " • Apr 1, 2023"
+            "url": "https://advays16.github.io/CSP-/2023/04/02/mc4.html",
+            "relUrl": "/2023/04/02/mc4.html",
+            "date": " • Apr 2, 2023"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Title",
             "content": "",
-            "url": "https://advays16.github.io/CSP-/2023/04/01/Untitled2.html",
-            "relUrl": "/2023/04/01/Untitled2.html",
-            "date": " • Apr 1, 2023"
+            "url": "https://advays16.github.io/CSP-/2023/04/02/Untitled2.html",
+            "relUrl": "/2023/04/02/Untitled2.html",
+            "date": " • Apr 2, 2023"
         }
         
     
@@ -26,9 +26,9 @@
         ,"post2": {
             "title": "Title",
             "content": "",
-            "url": "https://advays16.github.io/CSP-/2023/04/01/Untitled1.html",
-            "relUrl": "/2023/04/01/Untitled1.html",
-            "date": " • Apr 1, 2023"
+            "url": "https://advays16.github.io/CSP-/2023/04/02/Untitled1.html",
+            "relUrl": "/2023/04/02/Untitled1.html",
+            "date": " • Apr 2, 2023"
         }
         
     
@@ -37,9 +37,9 @@
         ,"post3": {
             "title": "Title",
             "content": "",
-            "url": "https://advays16.github.io/CSP-/2023/04/01/Untitled.html",
-            "relUrl": "/2023/04/01/Untitled.html",
-            "date": " • Apr 1, 2023"
+            "url": "https://advays16.github.io/CSP-/2023/04/02/Untitled.html",
+            "relUrl": "/2023/04/02/Untitled.html",
+            "date": " • Apr 2, 2023"
         }
         
     
@@ -68,8 +68,8 @@
   
     
         ,"post6": {
-            "title": "Dice Roll Simulation",
-            "content": "import random # Define a list of possible outcomes for the dice roll dice_outcomes = [1, 2, 3, 4, 5, 6] # Roll the dice and store the result in a variable dice_roll = random.choice(dice_outcomes) # Print the result of the dice roll print(&quot;The dice rolled a&quot;, dice_roll) # Define a dictionary to keep track of the number of times each outcome occurs outcome_counts = {} # Roll the dice 100 times and count the number of times each outcome occurs for i in range(100): roll = random.choice(dice_outcomes) if roll in outcome_counts: outcome_counts[roll] += 1 else: outcome_counts[roll] = 1 # Print the number of times each outcome occurred print(&quot; nOutcome Counts:&quot;) for outcome in dice_outcomes: count = outcome_counts.get(outcome, 0) print(outcome, &quot;occurred&quot;, count, &quot;times&quot;) # Define a 2D array to represent the outcomes of rolling two dice dice_outcomes_2d = [[i + j + 2 for j in range(6)] for i in range(6)] # Print the outcomes of rolling two dice as a 2D array print(&quot; nTwo Dice Outcomes:&quot;) for row in dice_outcomes_2d: for outcome in row: print(outcome, end=&quot; t&quot;) print() . The dice rolled a 2 Outcome Counts: 1 occurred 22 times 2 occurred 16 times 3 occurred 20 times 4 occurred 7 times 5 occurred 17 times 6 occurred 18 times Two Dice Outcomes: 2 3 4 5 6 7 3 4 5 6 7 8 4 5 6 7 8 9 5 6 7 8 9 10 6 7 8 9 10 11 7 8 9 10 11 12 . The code above first defines a list of possible outcomes for a dice roll (numbers 1 through 6), and then uses the random.choice() function to simulate rolling the dice and storing the result in a variable. . Next, the code defines a dictionary to keep track of the number of times each outcome occurs when rolling the dice 100 times. It uses a for loop with the range() function to roll the dice 100 times and count the number of times each outcome occurs. If an outcome has already occurred, the code increments its count in the dictionary. Otherwise, it adds the outcome to the dictionary with a count of 1. . Finally, the code defines a 2D array to represent the outcomes of rolling two dice. It uses a list comprehension to create a 6x6 array where each element represents the sum of the two dice outcomes. The code then uses nested for loops to print the 2D array in a grid-like format. . Overall, this code simulation provides a simple and visual way to understand the basic concepts of Lists, Dictionaries, 2D Arrays, and Iteration in Python through the example of rolling dice. .",
+            "title": "Dice Roll Simulation / Card Shuffle",
+            "content": "import random # Define a list of possible outcomes for the dice roll dice_outcomes = [1, 2, 3, 4, 5, 6] # Roll the dice and store the result in a variable dice_roll = random.choice(dice_outcomes) # Print the result of the dice roll print(&quot;The dice rolled a&quot;, dice_roll) # Define a dictionary to keep track of the number of times each outcome occurs outcome_counts = {} # Roll the dice 100 times and count the number of times each outcome occurs for i in range(100): roll = random.choice(dice_outcomes) if roll in outcome_counts: outcome_counts[roll] += 1 else: outcome_counts[roll] = 1 # Print the number of times each outcome occurred print(&quot; nOutcome Counts:&quot;) for outcome in dice_outcomes: count = outcome_counts.get(outcome, 0) print(outcome, &quot;occurred&quot;, count, &quot;times&quot;) # Define a 2D array to represent the outcomes of rolling two dice dice_outcomes_2d = [[i + j + 2 for j in range(6)] for i in range(6)] # Print the outcomes of rolling two dice as a 2D array print(&quot; nTwo Dice Outcomes:&quot;) for row in dice_outcomes_2d: for outcome in row: print(outcome, end=&quot; t&quot;) print() . The dice rolled a 2 Outcome Counts: 1 occurred 22 times 2 occurred 16 times 3 occurred 20 times 4 occurred 7 times 5 occurred 17 times 6 occurred 18 times Two Dice Outcomes: 2 3 4 5 6 7 3 4 5 6 7 8 4 5 6 7 8 9 5 6 7 8 9 10 6 7 8 9 10 11 7 8 9 10 11 12 . The code above first defines a list of possible outcomes for a dice roll (numbers 1 through 6), and then uses the random.choice() function to simulate rolling the dice and storing the result in a variable. . Next, the code defines a dictionary to keep track of the number of times each outcome occurs when rolling the dice 100 times. It uses a for loop with the range() function to roll the dice 100 times and count the number of times each outcome occurs. If an outcome has already occurred, the code increments its count in the dictionary. Otherwise, it adds the outcome to the dictionary with a count of 1. . Finally, the code defines a 2D array to represent the outcomes of rolling two dice. It uses a list comprehension to create a 6x6 array where each element represents the sum of the two dice outcomes. The code then uses nested for loops to print the 2D array in a grid-like format. . Overall, this code simulation provides a simple and visual way to understand the basic concepts of Lists, Dictionaries, 2D Arrays, and Iteration in Python through the example of rolling dice. . import random # Define a deck of cards deck = list(range(1, 53)) # Shuffle the deck random.shuffle(deck) # Print the shuffled deck print(deck) . [21, 43, 13, 51, 3, 32, 41, 5, 19, 30, 20, 9, 25, 27, 24, 50, 45, 26, 16, 7, 38, 31, 34, 11, 29, 36, 15, 2, 44, 14, 8, 4, 48, 6, 35, 22, 39, 52, 33, 17, 18, 47, 40, 23, 28, 49, 1, 10, 37, 42, 12, 46] . import random from PIL import Image # Define a deck of cards deck = [f&quot;{r}{s}&quot; for s in [&#39;C&#39;, &#39;D&#39;, &#39;H&#39;, &#39;S&#39;] for r in [&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;T&#39;,&#39;J&#39;,&#39;Q&#39;,&#39;K&#39;,&#39;A&#39;]] # Load the card images card_images = {card: Image.open(f&quot;cards/{card}.png&quot;) for card in deck} # Create a list of card images in the initial deck order initial_deck_images = [card_images[card] for card in deck] # Display the initial deck of cards initial_deck_image = Image.new(&quot;RGB&quot;, (900, 360)) x, y = 0, 0 for card_image in initial_deck_images: initial_deck_image.paste(card_image, (x, y)) x += 75 if x == 900: x, y = 0, y + 120 initial_deck_image.show() # Shuffle the deck random.shuffle(deck) # Create a list of card images in the shuffled deck order shuffled_deck_images = [card_images[card] for card in deck] # Display the shuffled deck of cards shuffled_deck_image = Image.new(&quot;RGB&quot;, (900, 360)) x, y = 0, 0 for card_image in shuffled_deck_images: shuffled_deck_image.paste(card_image, (x, y)) x += 75 if x == 900: x, y = 0, y + 120 shuffled_deck_image.show() . FileNotFoundError Traceback (most recent call last) /Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb Cell 4 in &lt;cell line: 8&gt;() &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt; deck = [f&#34;{r}{s}&#34; for s in [&#39;C&#39;, &#39;D&#39;, &#39;H&#39;, &#39;S&#39;] for r in [&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;T&#39;,&#39;J&#39;,&#39;Q&#39;,&#39;K&#39;,&#39;A&#39;]] &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt; # Load the card images -&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt; card_images = {card: Image.open(f&#34;cards/{card}.png&#34;) for card in deck} &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt; # Create a list of card images in the initial deck order &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt; initial_deck_images = [card_images[card] for card in deck] /Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb Cell 4 in &lt;dictcomp&gt;(.0) &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt; deck = [f&#34;{r}{s}&#34; for s in [&#39;C&#39;, &#39;D&#39;, &#39;H&#39;, &#39;S&#39;] for r in [&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;T&#39;,&#39;J&#39;,&#39;Q&#39;,&#39;K&#39;,&#39;A&#39;]] &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt; # Load the card images -&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt; card_images = {card: Image.open(f&#34;cards/{card}.png&#34;) for card in deck} &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt; # Create a list of card images in the initial deck order &lt;a href=&#39;vscode-notebook-cell:/Users/advayshindikar/vscode/CSP-/_notebooks/2023-03-26-dice-roll.ipynb#W3sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt; initial_deck_images = [card_images[card] for card in deck] File ~/opt/anaconda3/lib/python3.9/site-packages/PIL/Image.py:2953, in open(fp, mode, formats) 2950 filename = fp 2952 if filename: -&gt; 2953 fp = builtins.open(filename, &#34;rb&#34;) 2954 exclusive_fp = True 2956 try: FileNotFoundError: [Errno 2] No such file or directory: &#39;cards/2C.png&#39; .",
             "url": "https://advays16.github.io/CSP-/2023/03/26/dice-roll.html",
             "relUrl": "/2023/03/26/dice-roll.html",
             "date": " • Mar 26, 2023"
